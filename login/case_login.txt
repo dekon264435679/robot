@@ -1,0 +1,8 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          prcess_login.txt
+Resource          element_login.txt
+
+*** Test Cases ***
+正常登录
+    login    http://site.cjyun.org    wangshuo@cmstop.com    wangshuo2016@

@@ -1,0 +1,11 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          element_login.html
+
+*** Keywords ***
+login
+    [Arguments]    ${url}    ${username}    ${password}
+    open_brower    ${url}
+    put_username    ${username}
+    put_passowrd    ${password}
+    dian_login

@@ -1,0 +1,19 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+open_brower
+    [Arguments]    ${url}
+    Open Browser    ${url}    gc
+    Maximize Browser Window
+
+put_username
+    [Arguments]    ${username}
+    Input Text    name=username    ${username}
+
+put_passowrd
+    [Arguments]    ${password}
+    Input Text    xpath=//input[@type="password"]    ${password}
+
+dian_login
+    Click Element    xpath=//span[@name="login"]
